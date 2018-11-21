@@ -147,7 +147,7 @@ class App extends Component {
         this.setState({showTable: searchRes})
       }else{
         this.setState({searching: false})
-        let noRes = (<tr><td>Нет результатов</td></tr>)
+        let noRes = (<tr><td>No result</td></tr>)
         this.setState({showTable: noRes})
       }
     }
@@ -262,7 +262,7 @@ class App extends Component {
         {this.state.showTable}
       </table>
       <div className='App_table_navigationBar'>
-      {navigationBar.length>1 && this.state.downloaded.length > 50 ? navigationBar : ''}
+      {navigationBar.length>1 && this.state.downloaded.length> 50 && this.state.showTable.length > 1 ? navigationBar : ''}
       </div>
       </div>
     )
